@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>ISAAC HP</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/logo.png" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body class="d-flex flex-column h-100">
+        <main class="flex-shrink-0">
+            
+            <div id="navbar"></div>
+            <script>
+                // Función para cargar el archivo navbar.html en el div con id "navbar"
+                function loadNavbar() {
+                    fetch("navbar.html")
+                        .then(response => {
+                            return response.text();
+                        })
+                        .then(data => {
+                            document.getElementById("navbar").innerHTML = data;
+                        })
+                        .catch(error => {
+                            console.error("Error al cargar la barra de navegación:", error);
+                        });
+                }
+                
+                // Ejecuta la función al cargar la página
+                loadNavbar();
+            </script>
+            <!-- Header-->
+            <header class="bg-dark py-5 position-relative">
+                <!-- Carrusel de fondo -->
+                <div id="carouselExample" class="carousel slide carousel-fade position-absolute top-0 start-0 w-100 h-90">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/quilla.png" class="d-block w-100 h-100 object-fit-cover" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/2.png" class="d-block w-100 h-100 object-fit-cover" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/3.png" class="d-block w-100 h-100 object-fit-cover" alt="...">
+                        </div>
+                    </div>
+                    <!-- Botones de navegación del carrusel -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev" style="z-index: 3;">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next" style="z-index: 3;">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            
+                <!-- Capa negra transparente encima del carrusel -->
+                <div class="overlay"></div>
+            
+                <!-- Contenido del header -->
+                <div class="container px-5 position-relative" style="z-index: 2;">
+                    <div class="row gx-5 align-items-center justify-content-center">
+                        <div class="col-lg-8 col-xl-7 col-xxl-6">
+                            <div class="my-5 text-center text-xl-start">
+                                <h1 class="display-5 fw-bolder text-white mb-2">ISAAC HP</h1>
+                                <p class="lead fw-normal text-white-50 mb-4">En ISAAC HP, nos especializamos en crear software personalizado que se adapta a las necesidades de tu empresa. Nuestro equipo utiliza las últimas tecnologías para brindarte herramientas eficientes que optimizan tus procesos y potencian tu crecimiento.</p>
+                                <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
+                                    <a class="btn btn-primary btn-lg px-4 me-sm-3" href="#features">EMPEZAR</a>
+                                    <a class="btn btn-outline-light btn-lg px-4" href="#!">SABER MAS</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center">
+                            <img class="img-fluid rounded-3 my-5" src="img/logo.png" alt="...">
+                        </div>
+                    </div>
+                </div>
+            </header>
+            
+            <!-- Estilo personalizado -->
+            <style>
+                header {
+                    height: 100vh; /* El header ocupará toda la pantalla */
+                }
+            
+                /* Asegura que las imágenes del carrusel cubran el espacio sin distorsionarse */
+                header .carousel-item img {
+                    object-fit: cover;
+                    width: 100%;
+                    height: 100%;
+                }
+            
+                /* Capa negra transparente encima del carrusel */
+                .overlay {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 150%;
+                    height: 100%;
+                    background-color: rgba(0, 0, 0, 0.5); /* Capa negra con 50% de transparencia */
+                    z-index: 1; /* Debe estar por debajo del contenido pero por encima del carrusel */
+                }
+            
+                /* Asegura que el contenido esté sobre la capa negra */
+                header .container {
+                    position: relative;
+                    z-index: 2;
+                }
+            
+                /* Botones del carrusel encima de la capa negra */
+                .carousel-control-prev,
+                .carousel-control-next {
+                    z-index: 3; /* Asegura que los botones estén encima de la capa negra */
+                }
+            </style>
+            
+            
+            <!-- Estilo personalizado -->
+            <style>
+                header {
+                    height: 100vh; /* El header ocupará toda la pantalla */
+                }
+            
+                /* Asegura que las imágenes del carrusel cubran el espacio sin distorsionarse */
+                header .carousel-item img {
+                    object-fit: cover;
+                    width: 100%;
+                    height: 100%;
+                }
+            
+                /* Capa negra transparente encima del carrusel */
+                .overlay {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(9, 9, 9, 0.5); /* Capa negra con 50% de transparencia */
+                    z-index: 1; /* Debe estar por debajo del contenido pero por encima del carrusel */
+                }
+            
+                /* Asegura que el contenido esté sobre la capa negra */
+                header .container {
+                    position: relative;
+                    z-index: 2;
+                }
+            </style>
+                     
+            
+            <!-- Estilo personalizado -->
+            <style>
+                header {
+                    height: 100vh; /* El header ocupará toda la altura de la ventana */
+                }
+            
+                /* Asegura que las imágenes del carrusel cubran el espacio del fondo */
+                header .carousel-item img {
+                    object-fit: cover;
+                    width: 100%;
+                    height: 100%;
+                }
+            
+                /* Mantener el contenido encima del carrusel */
+                header .container {
+                    position: relative;
+                    z-index: 2;
+                }
+            
+                /* Ajustar el espacio interno y externo del contenido */
+                header .my-5 {
+                    padding-top: 50px; /* Ajusta según lo necesites */
+                    padding-bottom: 50px; /* Ajusta según lo necesites */
+                }
+            
+            </style>
+            
+            <!-- Servicios-->
+            <section class="py-5" id="features">
+                <div class="container px-5 my-5">
+                    <div class="row gx-5">
+                        <div class="col-lg-4 mb-5 mb-lg-0">
+                            <h2 class="fw-bolder mb-0">LA MEJOR FORMA DE COMENZAR A CONSTRUIR</h2>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="row gx-5 row-cols-1 row-cols-md-2">
+                                <div class="col mb-5 h-100">
+                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3 icon-hover">
+                                        <i class="bi bi-collection"></i>
+                                    </div>
+                                    <h2 class="h5 fw-bold">DESARROLO DE SOTWARE PERSONALIZADO</h2>
+                                    <p class="mb-0">Creamos soluciones a medida para optimizar los procesos internos de tu negocio y mejorar la experiencia de tus usuarios.</p>
+                                </div>
+                                <div class="col mb-5 h-100">
+                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3 icon-hover">
+                                        <i class="bi bi-building"></i>
+                                    </div>
+                                    <h2 class="h5 fw-bold">INTEGRACION DE SISTEMAS</h2>
+                                    <p class="mb-0">Conectamos tus herramientas y plataformas para que trabajen de manera eficiente y sin interrupciones.</p>
+                                </div>
+                                <div class="col mb-5 mb-md-0 h-100">
+                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3 icon-hover">
+                                        <i class="bi bi-toggles2"></i>
+                                    </div>
+                                    <h2 class="h5 fw-bold">AUTOMIZACION DE PROESOS</h2>
+                                    <p class="mb-0">Diseñamos sistemas que te permiten automatizar tareas repetitivas, ahorrando tiempo y recursos valiosos.</p>
+                                </div>
+                                <div class="col h-100">
+                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3 icon-hover">
+                                        <i class="bi bi-toggles2"></i>
+                                    </div>
+                                    <h2 class="h5 fw-bold">SOPORTE Y MANTENIMIENTO</h2>
+                                    <p class="mb-0">Proveemos soporte continuo y mejoras para asegurar que tu software siempre esté funcionando al máximo.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Testimonio-->
+            <section class="parallax-section">
+                <div class="fondo-negro-transparente">
+                    <div class="container px-5 my-5">
+                        <div class="row gx-5 justify-content-center">
+                            <div class="col-lg-10 col-xl-7">
+                                <div class="text-center">
+                                    <!-- Aquí eliminamos cualquier fondo de la cita -->
+                                    <div class="fs-4 mb-4 fst-italic fs-4 mb-4 fst-italic bg-no-background fw-bolder" style="background-color: transparent;">
+                                        "Trabajar con ISAAC HP ha transformado completamente nuestros procesos. Nos ayudaron a desarrollar un software a medida que ha mejorado la eficiencia de nuestra empresa en más del 50%. ¡Su equipo es increíble y muy profesional!"
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <img class="rounded-circle me-3" src="img/carlos.png" alt="..." />
+                                        <div class="fw-bold">
+                                            Carlos Rivas
+                                            <span class="fw-bold text-primary mx-1">/</span>
+                                            CEO, InnovateX
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <style>
+            /* Estilos para la sección parallax */
+            .bg-no-background {
+             background-color: transparent !important;
+            }
+            .parallax-section {
+                background-image: url('img/FONDO23.JPG'); /* Coloca aquí la URL de tu imagen */
+                min-height: 500px; /* Altura mínima para la sección */
+                background-attachment: fixed; /* Esto mantiene la imagen fija */
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: rgb(255, 255, 255);
+                text-align: center;
+            }
+
+            .fondo-negro-transparente {
+                background-color: rgba(0, 0, 0, 0.59);
+            }
+
+            </style>
+            <!-- Sección de Noticias-->
+            <section class="py-5">
+                <div class="container px-5 my-5">
+                    <div class="row gx-5 justify-content-center">
+                        <div class="col-lg-8 col-xl-6">
+                            <div class="text-center">
+                                <h2 class="fw-bolder">Últimas noticias</h2>
+                                <p class="lead fw-normal text-muted mb-5">Conoce cómo los avances impactan el mundo empresarial y las mejores prácticas para aprovecharlos</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row gx-5">
+                        <div class="col-lg-4 mb-5">
+                            <div class="card h-100 shadow border-0">
+                                <img class="card-img-top" src="img/noticia1.png" alt="..." />
+                                <div class="card-body p-4">
+                                    <div class="badge bg-primary bg-gradient rounded-pill mb-2">News</div>
+                                    <a class="text-decoration-none link-dark stretched-link" href="#!"><h5 class="card-title mb-3">Tendencias en desarrollo de software 2024</h5></a>
+                                    <p class="card-text mb-0">Conoce las tecnologías que marcarán el desarrollo de software este año, desde inteligencia artificial hasta plataformas sin código.</p>
+                                </div>
+                                <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
+                                    <div class="d-flex align-items-end justify-content-between">
+                                        <div class="d-flex align-items-center">
+                                            <img class="rounded-circle me-3" src="img/maria.png" alt="..." />
+                                            <div class="small">
+                                                <div class="fw-bold">María López</div>
+                                                <div class="text-muted">10 de enero 2025 &middot; 6 min read</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 mb-5">
+                            <div class="card h-100 shadow border-0">
+                                <img class="card-img-top" src="img/noticia2.png" alt="..." />
+                                <div class="card-body p-4">
+                                    <div class="badge bg-primary bg-gradient rounded-pill mb-2">Media</div>
+                                    <a class="text-decoration-none link-dark stretched-link" href="#!"><h5 class="card-title mb-3">Nueva actualización en Angular mejora el rendimiento</h5></a>
+                                    <p class="card-text mb-0">La última versión de Angular ha sido lanzada con mejoras clave en el rendimiento y nuevas funcionalidades. Ideal para optimizar aplicaciones en tiempo real.</p>
+                                </div>
+                                <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
+                                    <div class="d-flex align-items-end justify-content-between">
+                                        <div class="d-flex align-items-center">
+                                            <img class="rounded-circle me-3" src="img/carlos2.png" alt="..." />
+                                            <div class="small">
+                                                <div class="fw-bold">Carlos Jiménez</div>
+                                                <div class="text-muted">5 de enero de 2025 &middot; 4 min read</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 mb-5">
+                            <div class="card h-100 shadow border-0">
+                                <img class="card-img-top" src="img/noticia3.png" alt="..." />
+                                <div class="card-body p-4">
+                                    <div class="badge bg-primary bg-gradient rounded-pill mb-2">News</div>
+                                    <a class="text-decoration-none link-dark stretched-link" href="#!"><h5 class="card-title mb-3">La ciberseguridad se convierte en prioridad</h5></a>
+                                    <p class="card-text mb-0">La ciberseguridad ha tomado relevancia en las empresas debido a las crecientes amenazas digitales. Aprende las mejores estrategias para proteger tu negocio.</p>
+                                </div>
+                                <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
+                                    <div class="d-flex align-items-end justify-content-between">
+                                        <div class="d-flex align-items-center">
+                                            <img class="rounded-circle me-3" src="img/laura.png" alt="..." />
+                                            <div class="small">
+                                                <div class="fw-bold">Laura Fernández</div>
+                                                <div class="text-muted">1 de enero de 2025 &middot; 10 min read</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Call to action-->
+                    <aside class="bg-primary bg-gradient rounded-3 p-4 p-sm-5 mt-5">
+                        <div class="d-flex align-items-center justify-content-between flex-column flex-xl-row text-center text-xl-start">
+                            <div class="mb-4 mb-xl-0">
+                                <div class="fs-3 fw-bold text-white">Recibe nuestras últimas soluciones en software</div>
+                                <div class="text-white-50">Suscríbete a nuestro boletín para estar al tanto de nuestras innovaciones, actualizaciones de productos y noticias de la industria tecnológica.</div>
+                            </div>
+                            <div class="ms-xl-4">
+                                <div class="input-group mb-2">
+                                    <input class="form-control" type="text" placeholder="Email address..." aria-label="Email address..." aria-describedby="button-newsletter" />
+                                    <button class="btn btn-outline-light" id="button-newsletter" type="button">Enviar</button>
+                                </div>
+                                <div class="small text-white-50">Nos preocupamos por la privacidad y nunca compartiremos sus datos.</div>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </section>
+        </main>
+        <!-- Footer-->
+        <footer class="bg-dark py-4 mt-auto">
+            <div class="container px-5">
+                <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+                    <div class="col-auto"><div class="small m-0 text-white">Autor &copy; isaac david huillca paullo</div></div>
+                    <div class="col-auto">
+                        <a class="link-light small" href="#!">Privacy</a>
+                        <span class="text-white mx-1">&middot;</span>
+                        <a class="link-light small" href="#!">Terms</a>
+                        <span class="text-white mx-1">&middot;</span>
+                        <a class="link-light small" href="#!">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Modern Business - Start Bootstrap Template</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/logo.png" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body class="d-flex flex-column">
+        <main class="flex-shrink-0">
+            <!-- Navigation-->
+            <div id="navbar"></div>
+
+<script>
+    // Función para cargar el archivo navbar.html en el div con id "navbar"
+    function loadNavbar() {
+        fetch("navbar.html")
+            .then(response => {
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById("navbar").innerHTML = data;
+            })
+            .catch(error => {
+                console.error("Error al cargar la barra de navegación:", error);
+            });
+    }
+    
+    // Ejecuta la función al cargar la página
+    loadNavbar();
+</script>
+
+            <!-- Header-->
+            <header>
+                <section class="parallax-section">
+                    <div class="container px-5">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8 col-xxl-6">
+                                <div class="text-center my-5">
+                                    <div class="fondo-texto">
+                                        <h1 class="fw-bolder mb-3">Nuestra misión es transformar tu negocio.</h1>
+                                        <p class="lead fw-normal text-white mb-4">En DigiCore, creemos que cada empresa es única y merece soluciones tecnológicas adaptadas a sus necesidades específicas. Nuestra misión es crear software a medida que impulse la eficiencia, la innovación y el crecimiento en las empresas de todos los tamaños. Trabajamos con las tecnologías más avanzadas para desarrollar productos que no solo resuelvan problemas actuales, sino que también te preparen para los retos del futuro.</p>
+                                        <a class="btn btn-primary btn-lg" href="#scroll-target">Conoce más sobre nuestra historia</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Estilos CSS -->
+                <style>
+                    .parallax-section {
+                        background-image: url('img/fondo_nosotros.jpg'); /* Asegúrate de que la imagen existe */
+                        min-height: 600px; /* Ajusta la altura según lo necesites */
+                        background-attachment: fixed; /* Mantiene la imagen fija */
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin: 0;
+                        padding: 0;
+                        color: white;
+                        text-align: center;
+                    }
+            
+                    /* Fondo negro transparente con bordes redondeados */
+                    .fondo-texto {
+                        background-color: rgba(0, 0, 0, 0.482); /* Fondo negro con transparencia */
+                        padding: 20px; /* Espacio alrededor del texto */
+                        border-radius: 20px; /* Bordes redondeados */
+                        display: inline-block; /* Ajusta el ancho al contenido */
+                    }
+            
+                    header {
+                        margin: 0;
+                        padding: 0;
+                    }
+            
+                    body, html {
+                        margin: 0;
+                        padding: 0;
+                    }
+            
+                    #navbar {
+                        margin: 0;
+                        padding: 0;
+                    }
+                </style>
+            </header>
+            
+            
+            <!-- About section one-->
+            <section class="py-5 bg-light" id="scroll-target">
+                <div class="container px-5 my-5">
+                    <div class="row gx-5 align-items-center">
+                        <div class="col-lg-6"><img class="img-fluid rounded mb-5 mb-lg-0" src="img/fundacion.png" alt="..." /></div>
+                        <div class="col-lg-6">
+                            <h2 class="fw-bolder">Nuestra fundación</h2>
+                            <p class="lead fw-normal text-muted mb-0">Desde nuestra creación en [año de fundación], en DigiCore hemos estado enfocados en ofrecer soluciones tecnológicas que transformen los procesos empresariales. Lo que comenzó como un pequeño equipo de desarrolladores apasionados, hoy se ha convertido en una empresa de referencia en el desarrollo de software a medida. Nos especializamos en crear herramientas personalizadas que resuelvan las necesidades únicas de nuestros clientes.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- About section two-->
+            <section class="py-5">
+                <div class="container px-5 my-5">
+                    <div class="row gx-5 align-items-center">
+                        <div class="col-lg-6 order-first order-lg-last"><img class="img-fluid rounded mb-5 mb-lg-0" src="img/crecimiento.png" alt="..." /></div>
+                        <div class="col-lg-6">
+                            <h2 class="fw-bolder">Crecimiento y más allá</h2>
+                            <p class="lead fw-normal text-muted mb-0">A lo largo de los años, hemos evolucionado con la tecnología y las tendencias del mercado, ampliando nuestro equipo y nuestros servicios. Desde implementar sistemas de automatización hasta integrar plataformas complejas, en DigiCore seguimos comprometidos con la innovación constante y el éxito de nuestros clientes. Nuestro enfoque en la calidad y el servicio al cliente nos ha permitido crecer más allá de nuestras expectativas iniciales, manteniéndonos a la vanguardia del sector tecnológico.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Team members section-->
+            <section class="py-5 bg-light">
+                <div class="container px-5 my-5">
+                    <div class="text-center">
+                        <h2 class="fw-bolder">Nuestro equipo</h2>
+                        <p class="lead fw-normal text-muted mb-5">Dedicados a la calidad y el éxito de tu negocio.</p>
+                    </div>
+                    <div class="row gx-5 row-cols-1 row-cols-sm-2 row-cols-xl-4 justify-content-center">
+                        <div class="col mb-5 mb-5 mb-xl-0">
+                            <div class="text-center">
+                                <img class="img-fluid rounded-circle mb-4 px-4" src="img/lucas.png" alt="..." />
+                                <h5 class="fw-bolder">Lucas Ramírez</h5>
+                                <div class="fst-italic text-muted">Fundador &amp; CEO</div>
+                            </div>
+                        </div>
+                        <div class="col mb-5 mb-5 mb-xl-0">
+                            <div class="text-center">
+                                <img class="img-fluid rounded-circle mb-4 px-4" src="img/valeria.png" alt="..." />
+                                <h5 class="fw-bolder">Valeria Álvarez</h5>
+                                <div class="fst-italic text-muted">Directora Financiera (CFO)</div>
+                            </div>
+                        </div>
+                        <div class="col mb-5 mb-5 mb-sm-0">
+                            <div class="text-center">
+                                <img class="img-fluid rounded-circle mb-4 px-4" src="img/carlos3.png" alt="..." />
+                                <h5 class="fw-bolder">Carlos Torres</h5>
+                                <div class="fst-italic text-muted">Gerente de Operaciones</div>
+                            </div>
+                        </div>
+                        <div class="col mb-5">
+                            <div class="text-center">
+                                <img class="img-fluid rounded-circle mb-4 px-4" src="img/ana.png" alt="..." />
+                                <h5 class="fw-bolder">Ana Gutiérrez</h5>
+                                <div class="fst-italic text-muted">Directora de Tecnología (CTO)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- Footer-->
+        <footer class="bg-dark py-4 mt-auto">
+            <div class="container px-5">
+                <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+                    <div class="col-auto"><div class="small m-0 text-white">Autor &copy; Aracelly Quesada</div></div>
+                    <div class="col-auto">
+                        <a class="link-light small" href="#!">Privacy</a>
+                        <span class="text-white mx-1">&middot;</span>
+                        <a class="link-light small" href="#!">Terms</a>
+                        <span class="text-white mx-1">&middot;</span>
+                        <a class="link-light small" href="#!">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
